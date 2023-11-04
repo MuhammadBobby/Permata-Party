@@ -1,0 +1,235 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(245, 239, 239, 0.5);
+  backdrop-filter: blur(10px);
+  height: 50px;
+}
+
+nav .nama {
+  display: flex;
+  margin-top: 10px;
+  color: white;
+  z-index: -1;
+}
+
+.nama h3 {
+  align-self: center;
+  font-size: 25px;
+}
+
+.nama img {
+  height: 100px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 40%;
+}
+
+nav ul li a {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  font-size: 0.8em;
+  align-self: center;
+}
+
+nav ul li a:hover {
+  color: rgb(203, 243, 230);
+}
+
+.logout a {
+  align-self: center;
+  background-color: rgb(39, 41, 40);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 17px;
+  color: white;
+}
+
+/* menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 18px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  opacity: 0;
+  left: -0.5px;
+  top: -5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -2px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  scale: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+/* responsive */
+/* tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgb(139, 142, 150);
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 60%;
+    align-items: center;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* gallery */
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
