@@ -196,18 +196,18 @@ if (!isset($_SESSION["login"])) {
     <div class="m-auto">
       <p class="text-center text-sm text-white mt-8 lg:text-xl">Jika anda membutuhkan jawaban cepat, ajukan pertanyaan melalui <span class="text-cyan-900 font-bold text-lg lg:text-2xl">media sosial</span> kami.</p>
       <div class="sosmed mt-5 flex justify-center">
-        <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Whatsapp.png" alt="Whatsapp" /></a>
-        <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Instagram.png" alt="Whatsapp" /></a>
-        <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Tiktok.png" alt="Whatsapp" /></a>
-        <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Twitter.png" alt="Whatsapp" /></a>
-        <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Facebook.png" alt="Whatsapp" /></a>
+        <a href="https://wa.me/6281264416901" target="_blank" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Whatsapp.png" alt="Whatsapp" /></a>
+        <a href="https://instagram.com/permata.deco?igshid=OGQ5ZDc2ODk2ZA" target="_blank" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Instagram.png" alt="Instagram" /></a>
+        <a href="https://www.tiktok.com/@permatadeco?_t=8hKCYvh6R2v&_r=1" target="_blank" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Tiktok.png" alt="tiktok" /></a>
+        <!-- <a href="" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Twitter.png" alt="Whatsapp" /></a> -->
+        <a href="https://www.facebook.com/ita.yuhasnita?mibextid=9R9pXO" target="_blank" class="block w-16 lg:w-24 hover:scale-110"><img src="../img/Facebook.png" alt="facebook" /></a>
       </div>
     </div>
   </section>
   <!-- akhir help -->
 
   <footer class="py-5">
-    <p class="text-white text-xs font-light text-center lg:text-base lg:font-normal">All Right Reserved, Copyrigth &copy; Create & Desain by <a href="" class="text-cyan-300">Auliya</a></p>
+    <p class="text-white text-xs font-light text-center lg:text-base lg:font-normal">All Right Reserved, Copyrigth &copy; Create & Desain by <a href="https://instagram.com/permata.deco?igshid=OGQ5ZDc2ODk2ZA" target="_blank" class="text-cyan-300">Permata Party</a></p>
   </footer>
 
   <!-- script navbar -->

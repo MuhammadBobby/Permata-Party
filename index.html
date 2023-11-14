@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utama</title>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="absolute -z-10 top-0 left-0 right-0 bottom-0">
+      <video loop muted autoplay poster="img/home.jpg" class="w-screen h-screen brightness-[50%] blur-[2px]">
+        <source src="img/bg-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <section class="flex justify-center h-screen mt-16">
+      <div class="self-start">
+        <h1 class="lg:text-white text-5xl font-extrabold p-6 text-center lg:text-7xl">Siapa Anda ?</h1>
+        <div class="flex justify-around">
+          <a href="admin/index.php" class="w-24 h-8 text-center leading-8 bg-slate-400 rounded-full text-base font-bold lg:text-2xl lg:w-32 lg:h-10 lg:leading-10 hover:scale-110 transition-all">Admin</a>
+          <a href="user/index.php" class="w-24 h-8 text-center leading-8 bg-teal-300 rounded-full text-base font-bold lg:text-2xl lg:w-32 lg:h-10 lg:leading-10 hover:scale-110 transition-all">User</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
