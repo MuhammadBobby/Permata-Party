@@ -1,6 +1,15 @@
 <?php
 session_start();
 require "function.php";
+
+
+$user = $_GET['user'];
+if (!isset($user)) {
+  header("Location: ../index.html");
+  exit;
+}
+
+
 // pemeriksaan cookie
 if (isset($_COOKIE["xx"]) || isset($_COOKIE["yy"])) {
   $id = $_COOKIE["xx"];

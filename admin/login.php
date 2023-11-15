@@ -1,23 +1,11 @@
 <?php
-// session_start();
-// require "function.php";
-// // pemeriksaan cookie
-// if (isset($_COOKIE["xx"]) || isset($_COOKIE["yy"])) {
-//   $id = $_COOKIE["xx"];
-//   $email = $_COOKIE["yy"];
+$admin = $_GET['admin'];
+if (!isset($admin)) {
+  header("Location: ../index.html");
+  exit;
+}
 
-//   $result = mysqli_query($conn, "SELECT email FROM users WHERE id = $id");
-//   $row = mysqli_fetch_assoc($result);
-
-//   if ($email ===  hash("sha256", $row["email"])) {
-//     $_SESSION["login"] = true;
-//   }
-// }
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +49,7 @@
 
       <div class="flex justify-between mt-3">
         <p class="text-slate-500 font-light">Anda bukan Admin?</p>
-        <a href="../user/login.php" class="text-slate-800 font-semibold hover:text-teal-600">User</a>
+        <a href="../user/login.php?user=true" class="text-slate-800 font-semibold hover:text-teal-600">User</a>
       </div>
     </form>
 
