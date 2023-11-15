@@ -179,16 +179,23 @@ if (!isset($_SESSION["login"])) {
     <p class="text-center text-xs text-white lg:text-base">Anda memiliki kritik, saran, atau pertanyaan? Isi formulir dibawah dan dapatkan jawaban melalui Email anda</p>
 
     <div class="form flex justify-center">
-      <form action="" method="post">
+      <form action="help.php" method="post">
+        <?php
+        if (isset($_GET['sukses'])) : ?>
+          <div class="max-w-8  p-5 my-5 m-auto rounded-lg border border-teal-950 bg-green-300 shadow-xl">
+            <h2 class="text-lg font-bol text-teal-800 text-center">Data Berhasil Dikirim. <br> Terimakasih atas <br>masukan/saran/pertanyaan anda</h2>
+          </div>
+        <?php endif; ?>
+
         <label for="nama" class="text-lg text-slate-900 font-bold block mt-3 lg:text-2xl"> Nama Anda</label>
         <input type="text" name="nama" placeholder="Masukkan Nama" required autocomplete="off" class="w-64 rounded-md lg:w-80" />
 
-        <label for="nama" class="text-lg text-slate-900 font-bold block mt-3 lg:text-2xl">Email Anda</label>
+        <label for="email" class="text-lg text-slate-900 font-bold block mt-3 lg:text-2xl">Email Anda</label>
         <p class="text-white text-xs font-thin">Pastikan email yang anda masukkan aktif</p>
-        <input type="email" name="nama" placeholder="Masukkan Email Aktif" required autocomplete="off" class="w-64 rounded-md lg:w-80" />
+        <input type="email" name="email" placeholder="Masukkan Email Aktif" required autocomplete="off" class="w-64 rounded-md lg:w-80" />
 
-        <label for="nama" class="text-lg text-slate-900 font-bold block mt-3 lg:text-2xl">Kritik / Saran / Pertanyaan</label>
-        <textarea name="nama" placeholder="Tuliskan Disini" required autocomplete="off" class="w-64 rounded-md lg:w-80 lg:h-24"></textarea>
+        <label for="saran" class="text-lg text-slate-900 font-bold block mt-3 lg:text-2xl">Kritik / Saran / Pertanyaan</label>
+        <textarea name="saran" placeholder="Tuliskan Disini" required autocomplete="off" class="w-64 rounded-md lg:w-80 lg:h-24"></textarea>
 
         <button type="submit" name="submit" class="block m-auto bg-cyan-950 text-white mt-3 py-2 px-5 rounded-full hover:scale-110 hover:text-cyan-950 hover:bg-white hover:font-extrabold lg:text-xl">Kirim</button>
       </form>
